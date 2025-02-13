@@ -1,0 +1,221 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Back Button Styling */
+.back-btn {
+    display: inline-block;
+    background-color: #f44336;  /* Red color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    background-color: #d32f2f;  /* Darker red on hover */
+}
+
+/* Auth Buttons Styling (Sign In / Sign Up) */
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.auth-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.auth-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Product List Styling */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Product Styling */
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Product Details Page Styling */
+.product-details {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.product-details h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.product-details p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.product-details ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.product-details ul li {
+    font-size: 1rem;
+    color: #666;
+    padding: 8px 0;
+}
+
+.product-details a.btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.product-details a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design (Mobile) */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-details img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth-buttons {
+        margin-bottom: 10px;
+    }
+
+    .auth-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .product-details h2 {
+        font-size: 1.6rem;
+    }
+
+    .product-details p {
+        font-size: 1rem;
+    }
+}
