@@ -96,6 +96,19 @@ export class ProductController {
   public addToCart(product: any): void {
     console.log('Product added to cart:', product);
     // You can add logic to add this product to the cart here
+    let temp=[];
+
+    temp =JSON.parse(sessionStorage.getItem('cart') || '[]');
+    if (temp != null) {
+      temp.push(product);        
+    }else{
+      temp = [];
+      temp.push(product);
+    }
+
+    // temp.push(product);
+    sessionStorage.setItem('cart', JSON.stringify(temp));
+    this.$location.path('/cart'); // Redirect to catalog page
   }
 
    // Function to navigate to the details page for a product
