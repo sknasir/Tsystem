@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="../styles/catalog.css">
+</head>
+<body>
+
+    <h1>Our Laptop Collection</h1>
+
+    <div class="product-list" ng-controller="ProductController as data">
+        <!-- Laptop 1 -->
+        <div class="product" ng-repeat="product in data.catalogs">
+            <img ng-src="{{product.imagePath}}" alt="{{product.productName}}" class="same-size"/>               
+            <h5 class="card-title">{{product.productName}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <p><strong>Price: </strong>${{product.price}}</p>
+
+            <!-- Buttons Container -->
+            <div class="buttons">
+                <button class="btn btn-primary btn-block" ng-click="data.addToCart(product)">Add to Cart</button>
+                <button class="btn" ng-click="data.viewProductDetails(product.id)">View Product</button>
+            </div>
+        </div>       
+    </div>
+
+</body>
+</html>

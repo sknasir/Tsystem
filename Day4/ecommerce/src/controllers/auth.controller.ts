@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import {auth}
 
 export class AuthController {
   static $inject = ['$scope', '$location'];
@@ -9,7 +10,7 @@ export class AuthController {
   public username: string;
   public password: string;
 
-  constructor(private $scope: IDataScope, private $location: angular.ILocationService) {
+  constructor(private $scope: IDataScope, private $location: angular.ILocationService,private authservice : Authser) {
     this.message = "";
     this.username = "";
     this.password = "";

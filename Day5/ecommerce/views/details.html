@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../styles/details.css">
+</head>
+<body>
+    <!-- Back Button using JavaScript -->
+    
+
+    <h1>Product Details</h1>
+
+    <div class="product-details" ng-controller="ProductController as data">
+        <!-- Product Image -->
+        <img ng-src="{{data.selectedProduct.imagePath}}" alt="{{data.selectedProduct.productName}}" >
+
+        <!-- Product Title and Description -->
+        <h2>{{data.selectedProduct.productName}}</h2>
+        <p>{{data.selectedProduct.description}}</p>
+        <p>${{data.selectedProduct.price}}</p>
+        
+        
+
+        <a class="btn" ng-click="data.addToCartDetails(data.selectedProduct)">Add to cart</a>
+    </div>
+
+</body>
+</html>
