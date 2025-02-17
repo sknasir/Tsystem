@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "\"Nasir\"",
+  "license": "ISC",
+  "dependencies": {
+    "@types/angular": "^1.8.9",
+    "@types/angular-route": "^1.7.6",
+    "angular": "^1.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [],
+  "description": ""
+}
